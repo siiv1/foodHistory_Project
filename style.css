@@ -1,0 +1,350 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(sand-texture.png) ;
+  background-blend-mode:multiply;
+  background-size: cover;
+  background-color: rgb(185, 105, 40);
+}
+/*imported Font*/
+.macondo-regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.hero-image {
+    /* - HERO -
+    This code controls your "hero image." You will need to change hero.jpg to match your asset */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.224), rgba(0, 0, 0, 0.299)), url("hero.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Places text in the middle of the image */
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white;
+    font-size: 250%;
+}
+
+.hero-text h2 {
+    /* This section adds the text stylings for your hero block */
+    display: block;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+.hero-text h1 {
+  /* Large TITLE text*/
+  display: block;
+  border-color: aqua;
+  font-size: 3%;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.textblock {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+
+.blockquote {
+    background-color: ;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10%;
+}
+
+/* Change your button colors and other attributes here. */
+.buttonbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 0px solid ;
+}
+
+.button {
+    background-color: #2A5DB0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4682B4;
+}
+
+/* Change unordered list from disc (default) to circle, square, or none. */
+.ul {
+    
+    list-style-type:square;
+    font-size: 20pt;
+    padding: 2%;
+}
+
+/* Change orderd list from upper-roman to lower-alpha. */
+.ol {
+    list-style-type: upper-roman;
+    font-size: 20pt;
+    padding: 20px;
+}
+
+/* Learn other list conventions: https://www.w3schools.com/cssref/pr_list-style-type.asp */
+
+.video {
+    text-align: center;
+}
+
+.video-container {
+  	position:relative;
+  	padding-bottom:56.25%;
+  	padding-top:30px;
+  	height:0;
+  	overflow:hidden;
+    text-align: center;
+  }
+
+.video-container iframe, .video-container object, .video-container embed {
+  	position:absolute;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:100%;
+  }
+
+
+/* Preset Image Controls
+
+This section of CSS helps organize images to position and center the image to scale nicely on all screens */
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgageblock {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 100px;
+      padding-bottom: 100px;
+  }
+
+
+/*  - PARALLAX -
+This code controls that cool parallax image and scrolling effect. Change the image "fuego.jpg" below to match your asset.*/
+
+
+.parallax {
+    background-image: url("fuego.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* control the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+
+/* This code stops the parallax image and scrolling effect for small screens--at the moment, iPhones just don't it.*/
+@media screen and (max-width: 768px) {
+	.parallax {
+		background-attachment: inherit;
+    height: 100px;
+	}
+}
+
+
+/* -Preset Photo Grid -
+
+The following CSS is responsible for your photo grid .row, .column, .column img and @ media all work together to create your responsive image displays. Change the images on index.html.*/
+
+.photogrid {
+   text-align: center;
+   padding-top: 100px;
+   padding-bottom: 100px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+/* Create 3 equal columns that sit next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/* Responsive layout - makes grid a one column-layout instead of two or three columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 75%;
+        max-width: 75%;
+    }
+}
+/* - Preset Text Block Controls-
+this CSS element centers text elements*/
+
+
+/* This CSS section controls the paragraph, video blocks*/
+@media screen and (min-width: 800px) {
+    .textblock, .video {
+        margin: auto;
+        width: 50%;
+        padding: 100px;
+        font-size: 125%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .textblock, .video {
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 100px;
+        padding-bottom: 1000px;
+    }
+}
+
+
+#footer {
+        text-align: center;
+  }
+body {
+    color: #dcd3d3;
+    background: #ac6315;
+    font-family:papyrus, 'Times New Roman', Times, serif;
+  }
+  
+  h1{ 
+    text-align: right;
+    
+
+  } 
+  h2 {
+    margin: 5px;
+    text-align: left;
+  }
+  
+  a {
+    color: #ccc;
+  }
+  
+  section {
+    padding: 1px;
+  }
+      
+.hero {
+  font-family: Papyrus;
+  font-size: clamp(40px, 10vw, 100px);
+  line-height: 1;
+  display: inline-block;
+  color: #7a2525;
+  z-index: 2;
+  letter-spacing: 10px;
+
+  /* Bright things in dark environments usually cast that light, giving off a glow */
+  filter: drop-shadow( 3px 3px);
+}
+ /*THis messes with the container of objects */
+.hero-container {
+  position: relative;
+  padding: 200px 0;
+  text-align: center;
+  
+}
+
+/*THis messes with the text over an image (environment) */
+.centered {
+  color:darkgoldenrod;
+  font-family: "Macondo","Lucida Handwriting", Cursive, Tahoma, sans-serif;
+  font-size:xx-large;
+  font-weight:bold ;
+  text-shadow:
+    -1px -1px 0 #fbd76d,
+    1px -1px 0 #896605,
+    -1px 1px 0 #814204,
+    1px 1px 0 #000; 
+  position: absolute;
+  top: 80%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  opacity: 90%;
+}
+
+.environment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10%;
+  opacity: 0.7;
+  filter: blur(.5px);
+  background: url(market1.jpg)
+  center no-repeat;
+  background-size:cover;
+}
+.texture-bg {
+  opacity: 0.15;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*scrollable gallery object settings*/
+div.scroll-container {
+  scrollbar-width: thin;
+  background-color: #1e1202;
+  overflow:auto;
+  white-space: nowrap;
+  padding: 5px;
+  
+}
+
+div.scroll-container img {
+  padding: 1px;
+}
